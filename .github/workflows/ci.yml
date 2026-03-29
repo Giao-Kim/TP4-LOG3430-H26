@@ -9,7 +9,7 @@ on:
 jobs:
   test:
     name: Test on ${{ matrix.os }} (Python ${{ matrix.python-version }})
-    os: ${{matrix.os}}
+    runs-on: docker
 
     strategy:
       fail-fast: false
