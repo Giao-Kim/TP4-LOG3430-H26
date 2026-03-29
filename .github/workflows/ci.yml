@@ -2,7 +2,7 @@ name: Build and Test
 
 on:
   push:
-    branches: [ main ]
+    branches: [ question1 ]
   pull_request:
     branches: [ main ]
 
