@@ -15,8 +15,12 @@ jobs:
         os: [ubuntu-latest, windows-latest, macos-latest]
         python-version: ['3.11', '3.14']
   steps:
-    - uses: actions/checkout@v4
+    uses: actions/checkout@v4
 
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+    
+    
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v4
       with:
@@ -29,5 +33,5 @@ jobs:
       run: encoder --help
         
     - name: Run tests
-      run: python -m unittest 
+      run: pytest  
       
